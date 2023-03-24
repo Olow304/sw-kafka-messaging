@@ -1,0 +1,10 @@
+.message-view-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+

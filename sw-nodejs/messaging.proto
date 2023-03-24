@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package messaging;
+
+option go_package = "/";
+
+service Messaging {
+  rpc SendMessage (SendMessageRequest) returns (SendMessageResponse) {}
+  rpc StreamMessages (stream StreamMessagesRequest) returns (stream StreamMessagesResponse) {}
+}
+
+message SendMessageRequest {
+  string message = 1;
+}
+
+message SendMessageResponse {
+  string status = 1;
+}
+
+message StreamMessagesRequest {
+  bool subscribe = 1;
+}
+
+message StreamMessagesResponse {
+  string message = 1;
+}
